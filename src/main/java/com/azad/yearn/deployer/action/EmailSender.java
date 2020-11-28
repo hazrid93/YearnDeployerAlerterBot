@@ -35,7 +35,7 @@ public class EmailSender implements Runnable {
     @Override
     public void run() {
         for (XSource_Content innerData: data) {
-            for(int size = 0;size<1; size ++){
+            for(int size = 0;size<innerData.getResult().size(); size ++){
               //  log.info(Thread.currentThread().getName() + ", executing run() method!" + innerData.getResult().get(size).toString());
                 Map<String,String> data = innerData.getResult().get(size);
                 // Check for contract creation
